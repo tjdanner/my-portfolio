@@ -7,23 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
     <script src="script.js" defer></script>
     <title>Trevor Danner</title>
 </head>
 
 <body>
-    <div>
+    <div id="main">
         <h1>Trevor Danner</h1>
         <div id="icon-grid">
-            <img src="media\icons\about-filled-svgrepo-com.svg" alt="About" class="icons">
-            <img src="media\icons\resume-4-svgrepo-com.svg" alt="Resume" class="icons">
-            <img src="media\icons\projects-svgrepo-com.svg" alt="Projects" class="icons">
-            <img src="media\icons\github-svgrepo-com.svg" alt="GitHub" class="icons">
-            <img src="media\icons\linkedin-svgrepo-com.svg" alt="LinkedIn" class="icons">
-            <img src="media\icons\instagram-svgrepo-com.svg" alt="Instagram" class="icons">
-
+            <div class="grid-item"><img src="media\icons\about-filled-svgrepo-com.svg" alt="About" class="icons"></div>
+            <div class="grid-item"><img src="media\icons\resume-4-svgrepo-com.svg" alt="Resume" class="icons"></div>
+            <div class="grid-item"><img src="media\icons\projects-svgrepo-com.svg" alt="Projects" class="icons"></div>
+            <div class="grid-item"><img src="media\icons\github-svgrepo-com.svg" alt="GitHub" class="icons"></div>
+            <div class="grid-item"><img src="media\icons\linkedin-svgrepo-com.svg" alt="LinkedIn" class="icons"></div>
+            <div class="grid-item"><img src="media\icons\instagram-svgrepo-com.svg" alt="Instagram" class="icons"></div>
         </div>
-    </div>
+        <div id="about">
+            <img src="media\images\Headshot2.jpg" alt="Headshot" id="portrait">
+            <div id="p-container">
+                <p> I am a self-taught web developer, currently based in Des Moines, Iowa. Front-end development is
+                    currently my
+                    strong suit, as I have built sites with HTML, CSS and JavaScript. I am working on understanding
+                    back-end
+                    on
+                    a deeper level by learning Node.js, Express.js, and SQL. I aim to learn more about creating an app
+                    from
+                    start to finish, and how my contributions are relevant, be it front or back-end.
+                </p>
+
+                <p> I come from a background of science, with a major in Biology. Throughout my college and professional
+                    careers, I've had opportunities to learn more about coding. In college, I took a Python class and
+                    was
+                    able
+                    to apply what I learned to a greenhouse controls app built in Python. </p>
+
+                <p> Besides coding, I enjoy training jiu jitsu, horticulture, running, playing guitar and disc golfing.
+                </p>
+            </div>
+        </div>
+        <img src="media\icons\back-square-svgrepo-com.svg" alt="Back" class="icons" id="back">
 </body>
 
 </html>

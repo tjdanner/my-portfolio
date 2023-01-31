@@ -4,10 +4,88 @@ body {
     font-family: 'Poppins';
 }
 
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh auto;
+}
+
 h1 {
-    font-weight: 200;
+    text-align: center;
+    font-weight: 100;
+}
+
+#icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 75px);
+    grid-template-rows: repeat(2, 100px);
+    margin: auto;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icons {
-    width: 100px;
+    width: 50px;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+#about {
+    display: none;
+    width:75vw;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+#portrait {
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+    max-width: 300px;
+}
+
+#p-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 2rem;
+    font-size: .75rem;
+    text-align: justify;
+    max-width: 350px;
+    max-height: 350px;
+}
+
+#p-container > * {
+    margin: 0 0 1rem;
+    text-indent: 2rem;
+}
+ #back {
+    display: block;
+    width: 50px;
+    align-self: center;
+    display: none;
+ }
+
+@media screen and (max-width: 500px) {
+    #about {
+        flex-direction: column;
+    }
+
+    #p-container {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0;
+    }
 }
