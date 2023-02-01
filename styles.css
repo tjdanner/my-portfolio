@@ -2,6 +2,7 @@ body {
     background-color: black;
     color: white;
     font-family: 'Poppins';
+    overflow: hidden;
 }
 
 #main {
@@ -13,36 +14,65 @@ body {
 }
 
 h1 {
+    font-size: 2rem;
     text-align: center;
     font-weight: 100;
+    margin: 0;
+    width: 300px;
+    margin-bottom: 1rem;
 }
 
-#icon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 75px);
-    grid-template-rows: repeat(2, 100px);
+#last {
+    margin-bottom: 2rem;
+}
+
+#icon-container {
+    display: flex;
+    justify-content: center;
     margin: auto;
+    gap: 2rem;
+
 }
 
 .grid-item {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    width: 64px;
 }
 
+.label {
+    font-weight: 100;
+    display: none;
+    color: white;
+    margin: 0;
+    cursor: default;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 100%;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 100%;}
+    100% {opacity: 0;}
+}
+
+
 .icons {
-    width: 50px;
-    transition: 500ms;
+    width: 64px;
     cursor: pointer;
 }
 
 #about {
     display: none;
-    width:75vw;
+    width: 75vw;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    transition: 1s;
+    z-index: 1;
 }
 
 #portrait {
@@ -63,24 +93,38 @@ h1 {
     max-height: 350px;
 }
 
-#p-container > * {
+#p-container>* {
     margin: 0 0 1rem;
     text-indent: 2rem;
 }
- #back {
+
+#back {
     display: block;
     width: 50px;
     align-self: center;
     display: none;
- }
+}
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     #about {
         flex-direction: column;
     }
 
     #p-container {
         margin-top: 2rem;
+    }
+
+    #icon-container {
+        flex-wrap: wrap;
+        width: 300px;
+    }
+
+    #grid-item {
+        width: 0;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
     }
 }
 
