@@ -1,7 +1,7 @@
 const icons = document.getElementsByClassName('icons');
 const main = document.getElementById('main');
 const iconContainer = document.getElementById('icon-container');
-const backButton = document.getElementById('back');
+const back = document.getElementById('back-container');
 const label = document.getElementsByClassName('label');
 const about = document.getElementById('about')
 
@@ -17,23 +17,31 @@ for (let i = 0; i < icons.length; i++) {
             setTimeout(e => { label[i].style.display = ''; icons[i].style.transition = ''; }, 490)
         })
     })
+    /* backButton.addEventListener('mouseover', e=> {
+        backButton.style.transform = 'scale(1.15)'
+        backButton.addEventListener('mouseout', e=> {
+            backButton.style.transform = '';
+        })
+    }) */
 }
 
-/* icons[0].addEventListener('click', e => {
-    iconContainer.style.display = 'none';
-    about.style.display = 'flex';
-    backButton.style.display = 'block';
-    gsap.from(about, { duration: 1, x: '-100%' })
+icons[0].addEventListener('click', e => {
+    iconContainer.style.animation = '100ms fadeOut';
+    setTimeout(e=> {iconContainer.style.display = 'none'}, 100)
+    setTimeout(e=>{gsap.from(about, { duration: .5, x: '-150%' }); about.style.display = 'flex';}, 100)
+    setTimeout(e => { back.style.display = 'block'; }, 500);
+    back.style.animation = '500ms fadeIn';
 })
 
-icons[5].addEventListener('click', e => {
-    icons[5].style.display = '';
-    setTimeout(e => { iconContainer.style.display = 'flex' }, 900);
-    gsap.to(about, { duration: 1, x: '-200%' })
-    setTimeout(e => { about.style.display = '' }, 900)
-    gsap.from(icons, { duration: 1, y: '10000%', stagger: .1 })
+back.addEventListener('click', e => {
+    gsap.to(about, { duration: .5, x: '-150%' })
+    setTimeout(e => { about.style.display = ''; }, 1000)
+    back.style.animation = '100ms fadeOut';
+    back.style.display = '';
+    setTimeout(e => { iconContainer.style.display = ''; }, 500);
+    gsap.from(icons, { duration: .5, y: '1050%', delay: .5, stagger: .25 });
+    iconContainer.style.animation = '';
 })
- */
 
-gsap.from('h1', { duration: 1, y: '-1000%' })
-gsap.from(icons, { duration: 1, y: '10000%', stagger: .1 })
+gsap.from('h1', { duration: .5, y: '-1000%' });
+gsap.from(icons, { duration: .5, y: '1050%', delay: .5, stagger: .2 });
