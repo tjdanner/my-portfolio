@@ -3,6 +3,7 @@ body {
     color: white;
     font-family: 'Poppins';
     overflow: hidden;
+
 }
 
 #main {
@@ -10,7 +11,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20vh auto;
+    margin: 5vh auto;
 }
 
 h1 {
@@ -102,6 +103,60 @@ h1 {
     display: none;
 }
 
+#projects-container {
+    width: 1000px;
+    height: 75vh;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.border {
+    height: 275px;
+    width: 275px;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 16px;
+}
+
+.scroll-box{
+    height: 275px;
+    width: 275px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.project-label {
+    font-weight: 100;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    background: rgb(56, 56, 56);
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(173, 173, 173);
+    border-radius: 1rem;
+}
+
+.projects img {
+    width: 100%;
+}
+
 @media screen and (max-width: 550px) {
     #about {
         flex-direction: column;
@@ -123,6 +178,17 @@ h1 {
     h1 {
         margin-bottom: 2rem;
     }
+
+    #projects-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    #projects {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
