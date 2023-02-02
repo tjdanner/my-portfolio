@@ -7,6 +7,9 @@ const about = document.getElementById('about');
 const projectsContainer = document.getElementById('projects-container');
 const projects = document.getElementsByClassName('projects');
 
+gsap.from('h1', { duration: .5, y: '-1000%' });
+gsap.from(icons, { duration: .5, y: '2000%', delay: .5, stagger: .2 });
+
 for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener('mouseover', e => {
         icons[i].style.transition = '300ms'
@@ -19,37 +22,54 @@ for (let i = 0; i < icons.length; i++) {
             setTimeout(e => { label[i].style.display = ''; icons[i].style.transition = ''; }, 290)
         })
     })
-}
+};
 
-icons[0].addEventListener('click', e => {
+icons[0].onclick = e => {
     iconContainer.style.animation = '500ms fadeOut';
-    setTimeout(e => { iconContainer.style.display = 'none' }, 490)
-    setTimeout(e => { gsap.from(about, { duration: 1, x: '-150%' }); about.style.display = 'flex'; }, 500)
-    setTimeout(e => { back.style.display = 'block'; }, 1000);
+    setTimeout(e => { iconContainer.style.display = 'none'; }, 490)
+
+    setTimeout(e => { gsap.fromTo(about, {x: '-150%' }, {duration: 1, x: ''}); about.style.display = 'flex'; }, 500)
+
     back.style.animation = '500ms fadeIn';
-})
+    setTimeout(e => { back.style.display = 'block'; }, 1000);
+};
 
-back.addEventListener('click', e => {
-    gsap.to(about, { duration: 1, x: '-150%' })
-    setTimeout(e => { about.style.display = ''; }, 1000)
-    back.style.animation = '100ms fadeOut';
-    back.style.display = '';
-    setTimeout(e => { iconContainer.style.display = ''; }, 1000);
-    icons.style.animation = '500ms fadeIn'
-    iconContainer.style.animation = '';
-})
-
-icons[1].addEventListener('click', e=> {
+icons[1].onclick = e => {
     iconContainer.style.animation = '500ms fadeOut';
-    setTimeout(e => { iconContainer.style.display = 'none' }, 490);
-    setTimeout(e=> {projectsContainer.style.display = 'flex';}, 500);
-    back.style.display = 'block';
-    back.addEventListener('click', e=> {
-        projectsContainer.style.display = '';
-    })
-})
+    setTimeout(e => { iconContainer.style.display = 'none'; }, 490)
 
+    setTimeout(e=> {main.style.margin = '3vh';}, 500)
 
+    setTimeout(e => { gsap.fromTo(projectsContainer, {x: '-150%' }, {duration: 1, x: ''}); projectsContainer.style.display = 'flex'; }, 500)
 
-gsap.from('h1', { duration: .5, y: '-1000%' });
-gsap.from(icons, { duration: .5, y: '1050%', delay: .5, stagger: .2 });
+    back.style.animation = '500ms fadeIn';
+    setTimeout(e => { back.style.display = 'block'; }, 1000);
+};
+
+icons[2].onclick = e => {
+    window.open('media/DannerResumeTech.pdf');
+};
+
+icons[3].onclick =e => {
+    window.open('https://github.com/tjdanner');
+};
+
+icons[4].onclick = e => {
+    window.open('https://www.linkedin.com/in/trevor-danner-736b2117a/')
+};
+
+back.onclick = e => {
+    gsap.fromTo(about, {x: '' }, {duration: .8, x: '-150%'});
+    setTimeout(e => { about.style.display = 'none'; }, 490);
+
+    gsap.fromTo(projectsContainer, {x: '' }, {duration: .8, x: '-150%'});
+    setTimeout(e => { projectsContainer.style.display = ''; }, 490);
+
+    back.style.animation = '500ms fadeOut';
+    setTimeout(e => { back.style.display = 'none'; }, 490);
+
+    main.style.margin = '';
+
+    setTimeout(e => { iconContainer.style.display = ''; }, 500)
+    iconContainer.style.animation = '500ms fadeIn';
+};

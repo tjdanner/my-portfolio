@@ -3,7 +3,6 @@ body {
     color: white;
     font-family: 'Poppins';
     overflow: hidden;
-
 }
 
 #main {
@@ -11,16 +10,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5vh auto;
+    margin: 20vh auto;
+    transition: 1s;
 }
 
 h1 {
     font-size: 2rem;
     text-align: center;
     font-weight: 100;
-    margin: 0;
+    margin: 0 0 2rem;
     width: 300px;
-    margin-bottom: 1rem;
 }
 
 #last {
@@ -72,7 +71,6 @@ h1 {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 
 #portrait {
