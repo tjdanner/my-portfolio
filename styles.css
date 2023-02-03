@@ -160,6 +160,10 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+    html {
+        overflow-y: scroll;
+    }
+
     #icon-container {
         width: 80%;
         flex-wrap: wrap;
@@ -182,6 +186,7 @@ body {
         flex-wrap: nowrap;
         gap: 1rem;
         width: 100%;
+        height: 100%;
     }
 
     .projects {
