@@ -136,6 +136,7 @@ h1 {
 .project-label {
     font-weight: 100;
     cursor: pointer;
+    transition: 300ms;
 }
 
 ::-webkit-scrollbar {
