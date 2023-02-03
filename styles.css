@@ -157,41 +157,26 @@ h1 {
 }
 
 @media screen and (max-width: 550px) {
+    #icon-container {
+        width: 80%;
+        flex-wrap: wrap;
+    }
+
     #about {
         flex-direction: column;
     }
 
+    #portrait {
+        height: 250px;
+    }
+
     #p-container {
-        margin: 2rem;
-    }
-
-    #icon-container {
-        flex-wrap: wrap;
-        width: 300px;
-    }
-
-    #icon-container {
-        width: 0;
-    }
-
-    h1 {
-        margin-bottom: 2rem;
+        margin: 1rem 0;
     }
 
     #projects-container {
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: center;
-    }
-
-    #projects {
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 800px) {
-    body {
-        margin: 0;
+        gap: 1rem;
     }
 }
