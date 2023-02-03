@@ -1,8 +1,11 @@
+html {
+    overflow: hidden;
+}
+
 body {
     background-color: black;
     color: white;
     font-family: 'Poppins';
-    overflow: hidden;
 }
 
 #main {
@@ -14,7 +17,7 @@ body {
     transition: 1s;
 }
 
-h1 {
+ #banner {
     font-size: 2rem;
     text-align: center;
     font-weight: 100;
@@ -174,10 +177,13 @@ h1 {
         margin: 1rem 0 0;
     }
 
-
     #projects-container {
         flex-direction: column;
         flex-wrap: nowrap;
         gap: 1rem;
+    }
+
+    .projects {
+        width: auto;
     }
 }
