@@ -181,6 +181,7 @@ body {
         flex-direction: column;
         flex-wrap: nowrap;
         gap: 1rem;
+        width: 100%;
     }
 
     .projects {

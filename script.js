@@ -43,7 +43,7 @@ icons[0].onclick = e => {
         main.style.margin = '5vh auto';
     }
 
-    setTimeout(e => { gsap.fromTo(about, { x: '-150%' }, { duration: 1, x: '' }); about.style.display = 'flex'; banner.style.margin = '0';}, 500)
+    setTimeout(e => { gsap.fromTo(about, { x: '-150%' }, { duration: 1, x: '' }); about.style.display = 'flex'; banner.style.margin = '0 0 0.5rem';}, 500)
 
     back.style.animation = '500ms fadeIn';
     setTimeout(e => { back.style.display = 'block'; }, 1000);
@@ -55,7 +55,7 @@ icons[1].onclick = e => {
     iconContainer.style.animation = '500ms fadeOut';
     setTimeout(e => { iconContainer.style.display = 'none'; }, 490)
 
-    setTimeout(e => { main.style.margin = '3vh'; banner.style.margin = '0';}, 500)
+    setTimeout(e => { main.style.margin = '3vh'; banner.style.margin = '0 0 0.5rem';}, 500)
 
     setTimeout(e => { gsap.fromTo(projectsContainer, { x: '-150%' }, { duration: 1, x: '' }); projectsContainer.style.display = 'flex'; }, 500)
 
