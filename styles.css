@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: red;
     color: white;
     font-family: 'Poppins';
     overflow: hidden;
@@ -173,6 +173,7 @@ h1 {
     #p-container {
         margin: 1rem 0 0;
     }
+
 
     #projects-container {
         flex-direction: column;
