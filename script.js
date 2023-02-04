@@ -50,7 +50,7 @@ icons[0].onclick = e => {
     setTimeout(e => { gsap.fromTo(about, { x: '-150%' }, { duration: 1, x: '' }); about.style.display = 'flex';}, 500)
 
     back.style.animation = '500ms fadeIn';
-    setTimeout(e => { back.style.display = 'block'; }, 1000);
+    setTimeout(e => { back.style.display = 'flex'; }, 1000);
 };
 
 icons[1].onclick = e => {
@@ -68,7 +68,7 @@ icons[1].onclick = e => {
     setTimeout(e => { gsap.fromTo(projectsContainer, { x: '-150%' }, { duration: 1, x: '' }); projectsContainer.style.display = 'flex'; }, 500)
 
     back.style.animation = '500ms fadeIn';
-    setTimeout(e => { back.style.display = 'block'; }, 1000);
+    setTimeout(e => { back.style.display = 'flex'; }, 1000);
 
     if (window.screen.width <= 550) {
         label[5].style.display = 'block';

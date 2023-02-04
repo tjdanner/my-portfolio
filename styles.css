@@ -34,7 +34,7 @@ body {
     justify-content: center;
     margin: auto;
     gap: 2rem;
-
+    height: 75px;
 }
 
 .icon-container {
@@ -51,6 +51,7 @@ body {
     color: white;
     margin: 0;
     cursor: default;
+    text-align: center;
 }
 
 @keyframes fadeIn {
@@ -102,6 +103,13 @@ body {
 
 #back-container {
     display: none;
+}
+
+#back-container .label {
+    position: relative;
+    top: -.5rem;
+    left: .5rem;
+    letter-spacing: .5rem;
 }
 
 #projects-container {
@@ -165,7 +173,7 @@ body {
     }
 
     #icon-container {
-        width: 80%;
+        width: 80vw;
         flex-wrap: wrap;
     }
 
