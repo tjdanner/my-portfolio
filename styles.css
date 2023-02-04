@@ -106,9 +106,6 @@ body {
 }
 
 #back-container .label {
-    position: relative;
-    top: -.5rem;
-    left: .5rem;
     letter-spacing: .5rem;
 }
 
