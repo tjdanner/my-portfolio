@@ -80,7 +80,6 @@ body {
 #portrait {
     height: 300px;
     border-radius: 1rem;
-    /* max-width: 300px; */
 }
 
 #p-container {
@@ -174,6 +173,10 @@ body {
     #icon-container {
         width: 80vw;
         flex-wrap: wrap;
+    }
+
+    .icons {
+        cursor: default;
     }
 
     #about {
