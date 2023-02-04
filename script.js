@@ -37,15 +37,15 @@ icons[0].onclick = e => {
     banner.innerHTML = 'About';
 
     if (window.screen.width <= 550) {
+        main.style.margin = '5vh auto';
+    }
+
+    if (window.screen.width <= 550) {
         setTimeout(e => {banner.style.margin = '0 0 .5rem'}, 500) 
     }
 
     iconContainer.style.animation = '500ms fadeOut';
     setTimeout(e => { iconContainer.style.display = 'none'; }, 490);
-
-    if (window.screen.width <= 550) {
-        main.style.margin = '5vh auto';
-    }
 
     setTimeout(e => { gsap.fromTo(about, { x: '-150%' }, { duration: 1, x: '' }); about.style.display = 'flex';}, 500)
 
@@ -57,8 +57,11 @@ icons[1].onclick = e => {
     banner.innerHTML = 'Projects';
 
     if (window.screen.width <= 550) {
-        setTimeout(e => {banner.style.margin = '0 0 .5rem'}, 500) 
         main.style.margin = '5vh auto';
+    }
+
+    if (window.screen.width > 550) {
+        main.style.margin = '3vh auto'
     }
 
     iconContainer.style.animation = '500ms fadeOut';
