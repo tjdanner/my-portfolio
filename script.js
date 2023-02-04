@@ -58,12 +58,11 @@ icons[1].onclick = e => {
 
     if (window.screen.width <= 550) {
         setTimeout(e => {banner.style.margin = '0 0 .5rem'}, 500) 
+        main.style.margin = '5vh auto';
     }
 
     iconContainer.style.animation = '500ms fadeOut';
     setTimeout(e => { iconContainer.style.display = 'none'; }, 490)
-
-    setTimeout(e => { main.style.margin = '3vh';}, 500)
 
     setTimeout(e => { gsap.fromTo(projectsContainer, { x: '-150%' }, { duration: 1, x: '' }); projectsContainer.style.display = 'flex'; }, 500)
 
