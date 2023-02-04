@@ -21,7 +21,7 @@ body {
     font-size: 2rem;
     text-align: center;
     font-weight: 100;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
     width: 300px;
 }
 
@@ -75,25 +75,26 @@ body {
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    height: 300px;
+    margin: 0 0 2rem;
 }
 
 #portrait {
-    height: 320px;
+    height: 100%;
     border-radius: 1rem;
-
 }
 
 #p-container {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 02rem;
     justify-content: center;
     font-size: 1rem;
     font-weight: 200;
     line-height: 1.25rem;
     text-align: left;
     max-width: 320px;
-    max-height: 350px;
+    height: 100%;
 }
 
 #p-container>* {
@@ -118,12 +119,12 @@ body {
 
 #projects-container {
     width: 1000px;
-    height: 75vh;
     display: flex;
     gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
     display: none;
+    margin-bottom: 2rem;
 }
 
 .projects {
@@ -187,6 +188,9 @@ body {
 
     #about {
         flex-direction: column;
+        justify-content: center;
+        height: auto;
+        margin: 0 0 2rem;
     }
 
     #portrait {
@@ -201,6 +205,7 @@ body {
         width: 310px;
         text-align: justify;
         padding: 0;
+        justify-content: left;
     }
 
     #projects-container {
@@ -213,9 +218,5 @@ body {
 
     .projects {
         width: auto;
-    }
-
-    #back-container {
-        margin-top: 2rem;
     }
 }

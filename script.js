@@ -40,10 +40,6 @@ icons[0].onclick = e => {
         main.style.margin = '5vh auto';
     }
 
-    if (window.screen.width <= 550) {
-        setTimeout(e => {banner.style.margin = '0 0 .5rem'}, 500) 
-    }
-
     iconContainer.style.animation = '500ms fadeOut';
     setTimeout(e => { iconContainer.style.display = 'none'; }, 490);
 
