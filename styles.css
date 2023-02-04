@@ -87,7 +87,6 @@ body {
 #p-container {
     display: flex;
     flex-direction: column;
-    padding: 02rem;
     justify-content: center;
     font-size: 1rem;
     font-weight: 200;
@@ -95,6 +94,7 @@ body {
     text-align: left;
     max-width: 320px;
     height: 100%;
+    padding-left: 2rem;
 }
 
 #p-container>* {
