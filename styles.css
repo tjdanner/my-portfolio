@@ -174,11 +174,16 @@ body {
     }
 
     #portrait {
-        height: 250px;
+        height: 200px;
+        width: 310px;
+        object-fit:cover;
+        object-position: center -50px;
     }
 
     #p-container {
         margin: 1rem 0 0;
+        width: 310px;
+        text-align: justify;
     }
 
     #projects-container {
