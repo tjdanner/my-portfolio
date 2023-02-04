@@ -106,8 +106,10 @@ body {
 }
 
 #back-container .label {
-    letter-spacing: .5rem;
+    position: relative;
+    top: -.5rem;
 }
+
 
 #projects-container {
     width: 1000px;
@@ -201,5 +203,9 @@ body {
 
     .projects {
         width: auto;
+    }
+
+    #back-container {
+        margin-top: 2rem;
     }
 }
