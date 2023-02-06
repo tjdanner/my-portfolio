@@ -37,6 +37,8 @@ for (let i = 0; i < icons.length; i++) {
 icons[0].onclick = e => {
     banner.innerHTML = 'About';
 
+    html.style.overflowY = '';
+
     if (window.screen.width <= 550) {
         main.style.margin = '5vh auto';
     }
