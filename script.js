@@ -21,7 +21,7 @@ for (let i = 0; i < icons.length; i++) {
         icons[i].style.transform = 'scale(1.15)';
         label[i].style.display = 'block';
         label[i].style.animation = '300ms fadeIn'
-        if (window.screen.width > 550) {
+        if (window.screen.width > 550 && window.screen.height > 450) {
             icons[i].addEventListener('mouseout', e => {
                 icons[i].style.transform = '';
                 label[i].style.animation = '300ms fadeOut';
