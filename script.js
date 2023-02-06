@@ -32,6 +32,9 @@ for (let i = 0; i < icons.length; i++) {
     if (window.screen.width <= 550) {
         setTimeout(e => { label[i].style.display = 'block'; label[i].style.animation = '1000ms fadeIn'; }, 1500);
     }
+    if (window.screen.height <= 450) {
+        setTimeout(e => { label[i].style.display = 'block'; label[i].style.animation = '1000ms fadeIn'; }, 1500);
+    }
 };
 
 icons[0].onclick = e => {
