@@ -1,3 +1,4 @@
+const html = document.querySelector('html');
 const icons = document.getElementsByClassName('icons');
 const main = document.getElementById('main');
 const iconContainer = document.getElementById('icon-container');
@@ -52,6 +53,8 @@ icons[0].onclick = e => {
 icons[1].onclick = e => {
     banner.innerHTML = 'Projects';
 
+    html.style.overflowY = 'scroll';
+
     if (window.screen.width <= 550) {
         main.style.margin = '5vh auto';
     }
@@ -88,6 +91,8 @@ icons[4].onclick = e => {
 back.onclick = e => {
     banner.innerHTML = 'Trevor Danner';
     banner.style.margin = '';
+
+    html.style.overflowY = '';
 
     gsap.fromTo(about, { x: '' }, { duration: .8, x: '-150%' });
     setTimeout(e => { about.style.display = 'none'; }, 490);
