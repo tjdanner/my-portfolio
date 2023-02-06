@@ -149,6 +149,10 @@ body {
     overflow-x: hidden;
 }
 
+.scroll-box:nth-child(2) {
+    overflow: hidden;
+}
+
 .project-label {
     font-weight: 100;
     cursor: pointer;
