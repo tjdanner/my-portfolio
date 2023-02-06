@@ -37,7 +37,7 @@ for (let i = 0; i < icons.length; i++) {
 icons[0].onclick = e => {
     banner.innerHTML = 'About';
 
-    html.style.overflowY = '';
+    html.style.overflowY = 'scroll';
 
     if (window.screen.width <= 550) {
         main.style.margin = '5vh auto';
