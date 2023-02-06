@@ -112,3 +112,22 @@ for (let i = 0; i < projectLabels.length; i++) {
         }
     }
 }
+
+projectLabels[0].onclick = e => {
+    window.open('https://tjdanner.github.io/tea-cozy/');
+}
+
+projectLabels[1].onclick = e => {
+    window.open('https://tjdanner.github.io/colmar-academy/');
+}
+projectLabels[2].onclick = e => {
+    window.open('https://tjdanner.github.io/product-preview/');
+}
+
+projectLabels[3].onclick = e => {
+    window.open('https://tjdanner.github.io/interactive-rating-component/');
+}
+
+projectLabels[4].onclick = e => {
+    window.open('https://tjdanner.github.io/credit-card-form/');
+}
