@@ -125,9 +125,13 @@ projectLabels[2].onclick = e => {
 }
 
 projectLabels[3].onclick = e => {
-    window.open('https://tjdanner.github.io/interactive-rating-component/');
+    window.open('https://tjdanner.github.io/base-apparel/');
 }
 
 projectLabels[4].onclick = e => {
+    window.open('https://tjdanner.github.io/interactive-rating-component/');
+}
+
+projectLabels[5].onclick = e => {
     window.open('https://tjdanner.github.io/credit-card-form/');
 }
