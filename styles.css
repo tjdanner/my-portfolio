@@ -1,3 +1,8 @@
+:root {
+    --dark: #000000;
+    --light: #ffffff;
+}
+
 html {
     overflow-y: hidden;
 }
@@ -219,4 +224,29 @@ body {
     .projects {
         width: auto;
     }
+}
+
+#themes {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.theme-selector {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+#dark {
+    background-color: black;
+    border: 1px solid white;
+}
+
+#light {
+    background-color: white;
+    border: 1px solid black;
 }
