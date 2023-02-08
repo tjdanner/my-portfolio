@@ -29,7 +29,7 @@ for (let i = 0; i < icons.length; i++) {
         label[i].style.animation = 'fadeIn 500ms';
         if (window.screen.width > 550 && window.screen.height > 450) {
             icons[i].onmouseleave = e => {
-                setTimeout(e => { icons[i].style.transition = ''; }, 300)
+                setTimeout(e => { icons[i].style.transition = ''; }, 300);
                 icons[i].style.transform = '';
                 label[i].style.animation = 'fadeOut 300ms';
                 labelRevert = () => {
@@ -159,6 +159,8 @@ projectLabels[5].onclick = e => {
 
 
 const themeSelector = document.getElementsByClassName('theme-selector');
+let darkMode = localStorage.getItem('darkMode');
+let lightMode = localStorage.getItem('lightMode');
 
 removeTransitions = () => {
     main.style.transition = 'none';
@@ -169,16 +171,41 @@ removeTransitions = () => {
     }
 }
 
-themeSelector[0].onclick = e => {
+enableDark = () => {
     removeTransitions();
     document.querySelector(':root').style.setProperty('--dark', '');
     document.querySelector(':root').style.setProperty('--light', '');
+    localStorage.setItem('darkMode', 'enabled');
+    localStorage.setItem('lightMode', 'disabled');
 }
 
-themeSelector[1].onclick = e => {
+enableLight = () => {
     removeTransitions();
     document.querySelector(':root').style.setProperty('--dark', 'white');
     document.querySelector(':root').style.setProperty('--light', 'black');
-
+    localStorage.setItem('lightMode', 'enabled');
+    localStorage.setItem('darkMode', 'disabled');
 }
 
+if (lightMode === 'enabled') {
+    enableLight();
+} else {
+    enableDark();
+}
+
+themeSelector[0].onclick = e => {
+    darkMode = localStorage.getItem('darkMode');
+    if (lightMode === "enabled") {
+        removeTransitions();
+        enableDark();
+        console.log(darkMode);
+    }
+}
+
+themeSelector[1].onclick = e => {
+    if (darkMode === "enabled") {
+        removeTransitions();
+        enableLight();
+        console.log(darkMode);
+    }
+}

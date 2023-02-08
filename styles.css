@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 20vh auto;
-    transition: 1s;
+    /* transition: 1s; */
 }
 
  #banner {
@@ -236,6 +236,7 @@ body {
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #dark {
