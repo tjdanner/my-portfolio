@@ -155,7 +155,6 @@ body {
 .project-label {
     font-weight: 300;
     cursor: pointer;
-    transition: 300ms;
 }
 
 ::-webkit-scrollbar {
@@ -227,15 +226,15 @@ body {
 #themes {
     display: flex;
     justify-content: space-between;
-    width: 95px;
+    width: 75px;
     position: absolute;
     top: 1rem;
     right: 1rem;
 }
 
 .theme-selector {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
 }
 

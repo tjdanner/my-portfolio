@@ -10,30 +10,36 @@ const projects = document.getElementsByClassName('projects');
 const projectLabels = document.getElementsByClassName('project-label');
 const banner = document.getElementById('banner');
 
-
 gsap.from('h1', { duration: .5, y: '-1000%' });
 gsap.from(icons, { duration: .5, y: '2000%', delay: .5, stagger: .2 });
 
 
 
 for (let i = 0; i < icons.length; i++) {
+    if (window.screen.width <= 550 || window.screen.height <= 450) {
+        setTimeout(e => {
+            label[i].style.display = 'block';
+            label[i].style.animation = 'fadeIn 1000ms';
+        }, 1500);
+    }
     icons[i].onmouseover = e => {
         icons[i].style.transition = '300ms';
         icons[i].style.transform = 'scale(1.15)';
         label[i].style.display = 'block';
-        label[i].style.animation = '300ms fadeIn'
+        label[i].style.animation = 'fadeIn 500ms';
         if (window.screen.width > 550 && window.screen.height > 450) {
-            icons[i].onmouseout = e => {
+            icons[i].onmouseleave = e => {
+                setTimeout(e => { icons[i].style.transition = ''; }, 300)
                 icons[i].style.transform = '';
-                label[i].style.animation = '300ms fadeOut';
-                setTimeout(e => { label[i].style.display = ''; icons[i].style.transition = ''; }, 290)
+                label[i].style.animation = 'fadeOut 300ms';
+                labelRevert = () => {
+                    label[i].style.display = '';
+                }
+                setTimeout(labelRevert, 290);
             }
         }
     }
-    if (window.screen.width <= 550 || window.screen.height <= 450) {
-        setTimeout(e => { label[i].style.display = 'block'; label[i].style.animation = '1000ms fadeIn'; }, 1500);
-    }
-};
+}
 
 icons[0].onclick = e => {
     banner.innerHTML = 'About';
@@ -57,6 +63,8 @@ icons[1].onclick = e => {
     banner.innerHTML = 'Projects';
 
     html.style.overflowY = 'scroll';
+
+    main.style.transition = '1s';
 
     if (window.screen.width <= 550) {
         main.style.margin = '5vh auto';
@@ -93,6 +101,9 @@ icons[4].onclick = e => {
 
 back.onclick = e => {
     banner.innerHTML = 'Trevor Danner';
+
+    main.style.transition = '1s';
+
     banner.style.margin = '';
 
     html.style.overflowY = '';
@@ -114,9 +125,11 @@ back.onclick = e => {
 
 for (let i = 0; i < projectLabels.length; i++) {
     projectLabels[i].onmouseover = e => {
+        projectLabels[i].style.transition = '300ms'
         projectLabels[i].style.transform = 'scale(1.15)';
-        projectLabels[i].onmouseout = e => {
+        projectLabels[i].onmouseleave = e => {
             projectLabels[i].style.transform = '';
+            setTimeout(e => { projectLabels[i].style.transition = 'none'; }, 290)
         }
     }
 }
@@ -144,28 +157,28 @@ projectLabels[5].onclick = e => {
     window.open('https://tjdanner.github.io/credit-card-form/');
 }
 
+
 const themeSelector = document.getElementsByClassName('theme-selector');
-/* const dark = getComputedStyle(document.querySelector(':root')).getPropertyValue('--dark');
-const light = getComputedStyle(document.querySelector(':root')).getPropertyValue('--light'); */
-/* themeSelector[1].onclick = e => {
-    html.style.backgroundColor = 'white';
-    main.style.backgroundColor = 'white';
-    iconContainer.style.backgroundColor = 'white';
-    banner.style.color = 'black';
-    for (let i = 0; i < icons.length; i++) {
-        icons[i].style.stroke = 'black';
+
+removeTransitions = () => {
+    main.style.transition = 'none';
+    iconContainer.style.transition = 'none';
+    for (let i = 0; i < icons.projectLabels; i++) {
+        projectLabels[i].style.transition = 'none';
+        icons[i].style.transition = 'none';
     }
-} */
+}
 
 themeSelector[0].onclick = e => {
+    removeTransitions();
     document.querySelector(':root').style.setProperty('--dark', '');
     document.querySelector(':root').style.setProperty('--light', '');
 }
 
 themeSelector[1].onclick = e => {
+    removeTransitions();
     document.querySelector(':root').style.setProperty('--dark', 'white');
     document.querySelector(':root').style.setProperty('--light', 'black');
-    localStorage.setItem('--dark', 'white');
-    localStorage.setItem('--light', 'black');
+
 }
 
