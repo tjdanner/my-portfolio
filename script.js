@@ -16,19 +16,19 @@ gsap.from(icons, { duration: .5, y: '2000%', delay: .5, stagger: .2 });
 
 
 for (let i = 0; i < icons.length; i++) {
-    icons[i].addEventListener('mouseover', e => {
+    icons[i].onmouseover = e => {
         icons[i].style.transition = '300ms';
         icons[i].style.transform = 'scale(1.15)';
         label[i].style.display = 'block';
         label[i].style.animation = '300ms fadeIn'
         if (window.screen.width > 550 && window.screen.height > 450) {
-            icons[i].addEventListener('mouseout', e => {
+            icons[i].onmouseout = e => {
                 icons[i].style.transform = '';
                 label[i].style.animation = '300ms fadeOut';
                 setTimeout(e => { label[i].style.display = ''; icons[i].style.transition = ''; }, 290)
-            })
+            }
         }
-    })
+    }
     if (window.screen.width <= 550 || window.screen.height <= 450) {
         setTimeout(e => { label[i].style.display = 'block'; label[i].style.animation = '1000ms fadeIn'; }, 1500);
     }
@@ -142,3 +142,9 @@ projectLabels[4].onclick = e => {
 projectLabels[5].onclick = e => {
     window.open('https://tjdanner.github.io/credit-card-form/');
 }
+
+const themeSelector = document.getElementsByClassName('theme-selector');
+
+/* themeSelector.onclick = e => {
+    svg.f
+} */
