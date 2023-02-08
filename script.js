@@ -167,10 +167,8 @@ let lightMode = localStorage.getItem('lightMode');
 removeTransitions = () => {
     main.style.transition = 'none';
     iconContainer.style.transition = 'none';
-    for (let i = 0; i < icons.projectLabels; i++) {
-        projectLabels[i].style.transition = 'none';
-        icons[i].style.transition = 'none';
-    }
+    icons[0].style.transition = 'none';
+    icons[1].style.transition = 'none';
 }
 
 enableDark = () => {
