@@ -46,6 +46,8 @@ icons[0].onclick = e => {
 
     html.style.overflowY = 'scroll';
 
+    main.style.transition = '1s';
+
     if (window.screen.width <= 550) {
         main.style.margin = '5vh auto';
     }
