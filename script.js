@@ -10,6 +10,7 @@ const projects = document.getElementsByClassName('projects');
 const projectLabels = document.getElementsByClassName('project-label');
 const banner = document.getElementById('banner');
 
+
 gsap.from('h1', { duration: .5, y: '-1000%' });
 gsap.from(icons, { duration: .5, y: '2000%', delay: .5, stagger: .2 });
 
@@ -46,7 +47,7 @@ icons[0].onclick = e => {
     iconContainer.style.animation = '500ms fadeOut';
     setTimeout(e => { iconContainer.style.display = 'none'; }, 490);
 
-    setTimeout(e => { gsap.fromTo(about, { x: '-150%' }, { duration: 1, x: '' }); about.style.display = 'flex';}, 500)
+    setTimeout(e => { gsap.fromTo(about, { x: '-150%' }, { duration: 1, x: '' }); about.style.display = 'flex'; }, 500)
 
     back.style.animation = '500ms fadeIn';
     setTimeout(e => { back.style.display = 'flex'; }, 1000);
@@ -144,7 +145,27 @@ projectLabels[5].onclick = e => {
 }
 
 const themeSelector = document.getElementsByClassName('theme-selector');
-
-/* themeSelector.onclick = e => {
-    svg.f
+/* const dark = getComputedStyle(document.querySelector(':root')).getPropertyValue('--dark');
+const light = getComputedStyle(document.querySelector(':root')).getPropertyValue('--light'); */
+/* themeSelector[1].onclick = e => {
+    html.style.backgroundColor = 'white';
+    main.style.backgroundColor = 'white';
+    iconContainer.style.backgroundColor = 'white';
+    banner.style.color = 'black';
+    for (let i = 0; i < icons.length; i++) {
+        icons[i].style.stroke = 'black';
+    }
 } */
+
+themeSelector[0].onclick = e => {
+    document.querySelector(':root').style.setProperty('--dark', '');
+    document.querySelector(':root').style.setProperty('--light', '');
+}
+
+themeSelector[1].onclick = e => {
+    document.querySelector(':root').style.setProperty('--dark', 'white');
+    document.querySelector(':root').style.setProperty('--light', 'black');
+    localStorage.setItem('--dark', 'white');
+    localStorage.setItem('--light', 'black');
+}
+
