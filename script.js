@@ -189,23 +189,19 @@ enableLight = () => {
 
 if (lightMode === 'enabled') {
     enableLight();
-} else {
+} if (darkMode === 'enabled') {
     enableDark();
 }
 
 themeSelector[0].onclick = e => {
     darkMode = localStorage.getItem('darkMode');
-    if (lightMode === "enabled") {
         removeTransitions();
         enableDark();
         console.log(darkMode);
-    }
 }
 
 themeSelector[1].onclick = e => {
-    if (darkMode === "enabled") {
         removeTransitions();
         enableLight();
         console.log(darkMode);
-    }
 }
