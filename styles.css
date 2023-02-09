@@ -155,7 +155,7 @@ body {
 .project-label {
     font-weight: 300;
     cursor: pointer;
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem
 }
 
 ::-webkit-scrollbar {
@@ -222,6 +222,10 @@ body {
         margin: 0 0 2rem;
     }
 
+    #banner {
+        margin-bottom: 2rem;
+    }
+
     #portrait {
         height: 200px;
         width: 310px;
@@ -251,6 +255,7 @@ body {
 
     .project-label {
         cursor: default;
+        font-size: 1.5rem;
     }
 
     .theme-selector {
