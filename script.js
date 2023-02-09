@@ -59,6 +59,8 @@ icons[0].onclick = e => {
 
     back.style.animation = '500ms fadeIn';
     setTimeout(e => { back.style.display = 'flex'; }, 1000);
+
+    e.target.style.transform = '';
 };
 
 icons[1].onclick = e => {
@@ -87,18 +89,23 @@ icons[1].onclick = e => {
     if (window.screen.width <= 550) {
         label[5].style.display = 'block';
     }
+
+    e.target.style.transform = '';
 };
 
 icons[2].onclick = e => {
     window.open('media/DannerResumeTech.pdf');
+    e.target.style.transform = '';
 };
 
 icons[3].onclick = e => {
     window.open('https://github.com/tjdanner');
+    e.target.style.transform = '';
 };
 
 icons[4].onclick = e => {
     window.open('https://www.linkedin.com/in/trevor-danner-736b2117a/')
+    e.target.style.transform = '';
 };
 
 back.onclick = e => {
@@ -138,25 +145,31 @@ for (let i = 0; i < projectLabels.length; i++) {
 
 projectLabels[0].onclick = e => {
     window.open('https://tjdanner.github.io/tea-cozy/');
+    e.target.style.transform = '';
 }
 
 projectLabels[1].onclick = e => {
     window.open('https://tjdanner.github.io/colmar-academy/');
+    e.target.style.transform = '';
 }
 projectLabels[2].onclick = e => {
     window.open('https://tjdanner.github.io/product-preview/');
+    e.target.style.transform = '';
 }
 
 projectLabels[3].onclick = e => {
     window.open('https://tjdanner.github.io/base-apparel/');
+    e.target.style.transform = '';
 }
 
 projectLabels[4].onclick = e => {
     window.open('https://tjdanner.github.io/interactive-rating-component/');
+    e.target.style.transform = '';
 }
 
 projectLabels[5].onclick = e => {
     window.open('https://tjdanner.github.io/credit-card-form/');
+    e.target.style.transform = '';
 }
 
 
@@ -195,13 +208,13 @@ if (lightMode === 'enabled') {
 
 themeSelector[0].onclick = e => {
     darkMode = localStorage.getItem('darkMode');
-        removeTransitions();
-        enableDark();
-        console.log(darkMode);
+    removeTransitions();
+    enableDark();
+    console.log(darkMode);
 }
 
 themeSelector[1].onclick = e => {
-        removeTransitions();
-        enableLight();
-        console.log(darkMode);
+    removeTransitions();
+    enableLight();
+    console.log(darkMode);
 }
