@@ -44,7 +44,9 @@ for (let i = 0; i < icons.length; i++) {
 icons[0].onclick = e => {
     banner.innerHTML = 'About';
 
-    html.style.overflowY = 'scroll';
+    if (window.screen.height <= 550) {
+        html.style.overflowY = 'scroll';
+    }
 
     main.style.transition = '1s';
 
