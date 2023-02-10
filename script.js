@@ -9,11 +9,15 @@ const projectsContainer = document.getElementById('projects-container');
 const projects = document.getElementsByClassName('projects');
 const projectLabels = document.getElementsByClassName('project-label');
 const banner = document.getElementById('banner');
+const themes =document.getElementById('themes');
 
 gsap.from('h1', { duration: .5, y: '-1000%' });
 gsap.from(icons, { duration: .5, y: '2000%', delay: .5, stagger: .2 });
 
-
+setTimeout(e=>{
+    themes.style.display = 'flex';
+    themes.style.animation = 'fadeIn 1000ms';
+}, 2000);
 
 for (let i = 0; i < icons.length; i++) {
     if (window.screen.width <= 550 || window.screen.height <= 450) {

@@ -176,7 +176,7 @@ body {
 }
 
 #themes {
-    display: flex;
+    display: none;
     justify-content: space-between;
     width: 75px;
     position: absolute;
