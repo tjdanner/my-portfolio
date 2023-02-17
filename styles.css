@@ -74,10 +74,10 @@ body {
 
 #about {
     display: none;
-    overflow: hidden;
+    overflow-y: hidden;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 364px;
     margin: 0 0 2rem;
 }
 
@@ -95,9 +95,10 @@ body {
     font-weight: 300;
     line-height: 1.25rem;
     text-align: left;
-    max-width: 320px;
+    max-width: 450px;
     height: 100%;
     padding-left: 2rem;
+    overflow-y: auto;
 }
 
 #p-container>* {
@@ -239,6 +240,7 @@ body {
         text-align: justify;
         padding: 0;
         justify-content: left;
+        overflow-y: hidden;
     }
 
     #projects-container {
