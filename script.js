@@ -100,7 +100,7 @@ icons[1].onclick = e => {
 };
 
 icons[2].onclick = e => {
-    window.open('media/DannerResumeTech.pdf');
+    window.open('media/DannerResumePortfolio.pdf');
     e.target.style.transform = '';
 };
 
