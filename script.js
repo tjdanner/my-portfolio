@@ -159,7 +159,7 @@ projectLabels[1].onclick = e => {
     e.target.style.transform = '';
 }
 projectLabels[2].onclick = e => {
-    window.open('https://tjdanner.github.io/product-preview/');
+    window.open('https://tjdanner.github.io/API-dictionary/');
     e.target.style.transform = '';
 }
 
